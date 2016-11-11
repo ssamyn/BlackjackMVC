@@ -1,10 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace BlackJackGame.Models {
+    [JsonObject(MemberSerialization.OptIn)]
     public class Hand {
 
         #region Fields
+        [JsonProperty]
         private IList<BlackJackCard> _cards;
         #endregion
 
